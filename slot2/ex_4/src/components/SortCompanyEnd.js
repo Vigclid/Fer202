@@ -1,5 +1,5 @@
 
-
+import { useState ,memo} from "react"
 
 const SortCompanyEnd = ({company}) => {
     const Sort = company.sort((a,b) => {
@@ -22,4 +22,4 @@ const SortCompanyEnd = ({company}) => {
 }
 
 
-export default SortCompanyEnd;
+export default memo(SortCompanyEnd);

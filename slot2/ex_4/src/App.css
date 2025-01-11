@@ -22,6 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-bottom: 100px;
 }
 
 .App-link {
@@ -35,4 +36,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+nav a {
+  padding: 10px; /* Tạo khoảng cách ngang giữa các liên kết */
+  
+  text-decoration: none; /* Loại bỏ gạch chân */
+  color: rgb(255, 255, 255); /* Màu chữ */
 }
