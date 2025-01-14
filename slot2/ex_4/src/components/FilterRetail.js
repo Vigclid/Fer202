@@ -1,5 +1,5 @@
 
-
+import { useState ,memo} from "react"
 const FilterRetail = ({company}) => {
     return (
         <>
@@ -28,4 +28,4 @@ const FilterRetail = ({company}) => {
 
 
 
-export default FilterRetail;
+export default memo(FilterRetail);

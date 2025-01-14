@@ -8,6 +8,9 @@ import SortCompanyEnd from './components/SortCompanyEnd';
 import IncreaseNumber from './components/IncreaseNumber';
 import HandleRec from './components/HandleRec';
 import HandleTri from './components/HandleTri';
+import { ToastContainer, toast } from 'react-toastify';
+
+
 
 function App() {
 
@@ -23,6 +26,8 @@ function App() {
   const [triToggle,setTriToggle] = useState(false);
   const [recToggle,setRecToggle] = useState(false);
 
+
+  const notify = () => toast("Purchase successful!");
 
   const companies = [
     { name: "Company One", category: "Finance", start: 1981, end: 2004 },
@@ -60,6 +65,14 @@ function App() {
   }
 
 
+
+  const cssNav = {
+    background: 'grey',
+    padding: '16px',
+    position: 'fixed',
+    width: '100%'
+  };
+
   var people = [
     {name: 'Jack', age: 50},
     {name: 'Michael', age: 9}, 
@@ -83,7 +96,7 @@ function App() {
   }
 
 
-  ages.sort(function(a, b){return a-b});
+  ages.sort((a,b) => b-a);
   
   const total = ages.reduce((acc,cur) => acc +cur,0);
 
@@ -108,7 +121,7 @@ function App() {
     <div className="">
 
 
-      <nav style={{background : "grey", padding :"16px" , position: "fixed" ,width : "100%"}}>
+      <nav style={cssNav}>
         <a href="/html/" style={{backgroundColor : "green"}}>HOME</a> |
         <a href="/css/">SEARCH</a> |
         <a href="/js/">CONTRACT</a> |
@@ -119,7 +132,7 @@ function App() {
 
       <header className="App-header">
         <h1>Hello <span style={{color: "blue"}}>React</span></h1>
-
+    
 
         <img src={logo} className="App-logo" alt="logo" />
         <i style={{color : "cyan"}}>This is the best React Logo</i>
@@ -218,6 +231,14 @@ function App() {
         {recToggle && <HandleRec />}
       
         {triToggle && <HandleTri />}
+
+
+
+        <div>
+          <button onClick={notify}>Notify!</button>
+          <ToastContainer />
+      </div>
+
       </header>
     </div>
   );

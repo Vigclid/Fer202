@@ -1,6 +1,6 @@
 
 
-
+import { useState ,memo} from "react"
 
 const EachCompany = ({company}) => {
 
@@ -19,4 +19,4 @@ const EachCompany = ({company}) => {
     )
 }
 
-export default EachCompany;
+export default memo(EachCompany);

@@ -1,6 +1,6 @@
 
 
-
+import { useState ,memo} from "react"
 
 const FilterCompany = ({company}) => {
     return (
@@ -18,4 +18,4 @@ const FilterCompany = ({company}) => {
     )
 }
 
-export default FilterCompany;
+export default memo(FilterCompany);
