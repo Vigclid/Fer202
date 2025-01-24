@@ -69,8 +69,9 @@ function App() {
             )
           }
         </ul>
+        
         <p>---------------------EX3 (components)----------------------</p>
-        <PeopleList people = {people}/>
+        <PeopleList />
         <p>---------------------EX4----------------------</p>
         <PeopleListInTable people = {people}/>
         <p>---------------------EX5----------------------</p>
