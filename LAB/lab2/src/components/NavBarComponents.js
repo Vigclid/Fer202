@@ -4,6 +4,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import {memo } from "react"
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import './NavBarComponent.css';
+
 
 const  NavBarComponents = () => {
   return (
