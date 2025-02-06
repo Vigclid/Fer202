@@ -52,9 +52,9 @@ const FormRegister = () => {
                     <Form.Label >Đến</Form.Label>
         
                     <Form.Select aria-label="Default select example">
-                        <option value="1">Hà Nội</option>
-                        <option value="2">Đà Nẵng</option>
-                        <option value="3">Hồ Chí Minh</option>
+                        <option value="1">Hải Phòng</option>
+                        <option value="2">Nha Trang</option>
+                        <option value="3">Quảng Bình</option>
                     </Form.Select>
 
                 </Col>
