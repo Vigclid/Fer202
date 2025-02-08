@@ -2,13 +2,23 @@ import {memo} from 'react'
 import { Container,Row,Col,Button,InputGroup,Form } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-
+import { ToastContainer, toast } from 'react-toastify';
 
 const FormRegister = () => {
+    const notify = () => toast('Succesfull Purchase!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark"
+        });;
 
     return (
-        <Container className="my-5 border" >
-            <Row><h3><b>Form đặt vé máy bay</b></h3></Row>
+        <Container className="my-5 border shadow-lg p-3 mb-5 bg-white rounded" >
+            <Row className='text-center'><h3><b>Form đặt vé máy bay</b></h3></Row>
 
             <Row>
                 <Form.Label>Họ tên</Form.Label>
@@ -79,8 +89,20 @@ const FormRegister = () => {
             </Row>
 
             <Row>
-                <Button variant='primary'>Đặt Vé </Button>
+                <Button variant='primary' onClick={notify}>Đặt Vé </Button>
+                
             </Row>
+            <ToastContainer position="top-right"
+            autoClose={2000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+             />
         </Container>
     )
 }
