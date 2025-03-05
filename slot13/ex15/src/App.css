@@ -1,0 +1,70 @@
+body {
+  background-color: #242424 !important; /* Nền tối */
+  color: #e0e0e0; /* Chữ sáng */
+  font-family: Arial, sans-serif;
+  transition: opacity 0.5s;
+}
+
+.div-total {
+  --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+  width: 75%;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-radius: 1rem;
+  overflow: visible !important;
+  background: var(--background); /* Chỉ cần dòng này, không cần background: #5a5a5a */
+  position: relative;
+  z-index: 1;
+}
+
+.div-total::after {
+  position: absolute;
+  content: "";
+  top: 0; /* Đặt ở đầu phần tử cha */
+  left: 0;
+  right: 0;
+  bottom: 0; /* Đảm bảo che phủ toàn bộ */
+  z-index: -1;
+  filter: blur(20px); /* Giảm blur để rõ ràng hơn */
+  background: var(--background); /* Chỉ dùng gradient */
+  transition: opacity 0.5s;
+}
+
+ .div-total-info {
+  --color: #1a1a1a;
+    background: var(--color);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    border-radius: .7rem;
+    padding-bottom: 5%;
+    padding-top: 5%;
+ }
+
+
+ @keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+h1 {
+  font-weight: bolder !important;
+  background: linear-gradient(to right, #fba608, #fb5e0a, #ff6666, #fba608);
+  background-size: 200% 100%; /* Set the initial background size */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: moveGradient 2s linear infinite;
+  -moz-animation: moveGradient 2s linear infinite;
+  -o-animation: moveGradient 2s linear infinite;
+  animation: moveGradient 2s linear infinite;
+}
