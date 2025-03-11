@@ -1,0 +1,132 @@
+/* App.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5; /* Light background */
+  margin: 0; /* Remove default body margin */
+  padding: 0;
+  color: #333; /* Darker text for better contrast */
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+}
+
+/* Component Container */
+.component-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(240, 240, 240, 0.6);
+  padding: 20px;
+  margin: 20px;
+  max-width: 600px;
+  width: 100%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+  color: #333;
+
+}
+
+.component-container:hover{
+    transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+
+/* Button Styling (using React-Bootstrap classes and custom styles) */
+.btn {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-weight: 500;
+}
+
+.btn:hover {
+   transform: scale(1.05); /* Slightly enlarge on hover */
+   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn:active{
+   transform: scale(0.95);/*slightly depress */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+
+}
+
+/* Heading Styles */
+h1 {
+  color: #2979ff;  /* A nice blue for the heading */
+  margin-bottom: 15px;
+  font-size: 2rem; /* More specific size */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adding a Text Shadow */
+}
+
+
+p {
+  font-size: 1.2rem; /* Larger font for readability */
+  margin-bottom: 10px;
+}
+.me-2 {
+  margin-right: 0.5rem !important; /* Correct spacing */
+}
+
+/* Animation for count updates (subtle fade and scale) */
+.count-updated {
+  animation: count-pulse 0.5s ease-out;
+}
+
+@keyframes count-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+/* Custom Alert Styling (Optional - Enhance React-Bootstrap Alert)*/
+.alert {
+   position: relative; /*for smooth animations and custom transitions*/
+    animation: slideIn 0.4s forwards;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius:.25rem
+}
+@keyframes slideIn{
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity:1
+    }
+}
+
+.alert-dismissible .btn-close{
+    /*Customizing position, top, and right of the dismiss button*/
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 1.25rem 1.25rem;
+
+}

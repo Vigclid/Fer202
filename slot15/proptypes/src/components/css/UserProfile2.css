@@ -1,0 +1,41 @@
+/* UserProfile2.css */
+.user-profile2 {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .user-profile2 h3 {
+    color: #2980b9;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .user-profile2 .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .user-profile2 .form-label {
+    font-weight: 500;
+    color: #34495e;
+  }
+  
+  .user-profile2 .form-control {
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+  }
+  
+  .user-profile2 .btn-primary {
+    background-color: #2980b9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .user-profile2 .btn-primary:hover {
+    background-color: #2c3e50;
+  }
