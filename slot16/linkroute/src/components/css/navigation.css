@@ -1,0 +1,47 @@
+/* Import Google Fonts cho font chữ đẹp */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Định dạng chung cho thanh điều hướng */
+.navbar {
+  background: linear-gradient(90deg, #1f4037, #99f2c8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+}
+
+/* Thương hiệu (logo) của ứng dụng */
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000000 !important;
+  letter-spacing: 1px;
+}
+
+/* Các liên kết trong thanh điều hướng */
+.nav-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  margin-left: 1rem;
+  color: #000000 !important;
+  transition: color 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột qua liên kết */
+.nav-link:hover {
+  color: #00f7ff !important;
+}
+
+/* Định dạng chung cho container của các trang */
+.container {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Định dạng cho tiêu đề */
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+}
