@@ -1,0 +1,34 @@
+workflow:
+  name: Auto Social Post
+  trigger:
+    event: "NewContentPublished"  # Sự kiện kích hoạt workflow, ví dụ: có nội dung mới được duyệt
+  steps:
+    - name: Prepare Content
+      action: "applyTemplate"
+      parameters:
+        template: |
+          {
+            "title": "{{ title }}",
+            "body": "{{ content }}",
+            "image": "{{ image_url }}",
+            "hashtags": "{{ hashtags }}"
+          }
+    - name: Post to Facebook
+      action: "postToAPI"
+      parameters:
+        platform: "Facebook"
+        api_endpoint: "https://graph.facebook.com/v12.0/me/feed"
+        method: "POST"
+        payload: "{{ prepared_content }}"
+    - name: Post to Twitter
+      action: "postToAPI"
+      parameters:
+        platform: "Twitter"
+        api_endpoint: "https://api.twitter.com/2/tweets"
+        method: "POST"
+        payload: "{{ prepared_content }}"
+    - name: Log Results
+      action: "log"
+      parameters:
+        destination: "database"
+        data: "{{ api_responses }}"
